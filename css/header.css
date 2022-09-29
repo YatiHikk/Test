@@ -1,0 +1,178 @@
+@font-face {
+  font-family: "Ubuntu";
+  font-weight: 400;
+  src: url(../fonts/Ubuntu-Regular.ttf);
+}
+
+header{
+  max-width: 1440px;
+  position: fixed;
+  align-items: center;
+  padding: 30px;
+  width: 95%;
+}
+
+.header__section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  text-transform: uppercase;
+}
+
+.header__img{
+  height: 55px;
+  display: flex;
+  align-items: flex-end;
+  cursor: pointer;
+}
+
+.header__widget{
+  height: auto;
+  margin-right: 5px;
+}
+
+.header__text,
+.header__text a{
+  text-decoration: none;
+  display: flex;
+  font-family: 'Ubuntu';
+  color: #001B5B;
+  align-items: flex-end;
+}
+.text__address {
+  font-size: 16px;
+}
+
+.header__text:before{
+  margin-top: auto;
+  min-width: 40px;
+  min-height: 40px;
+  content: '';
+  background: url("../img/Location.png") bottom no-repeat;
+}
+
+.header__text:nth-of-type(3):before{
+  background: url("../img/Mail.png") bottom no-repeat;
+}
+
+.header__text:nth-of-type(4):before{
+  background: url("../img/Telephon.png") bottom no-repeat;
+}
+
+.header__text:nth-of-type(5):before{
+  background: url("../img/Search.png") bottom no-repeat;
+}
+
+.header__contact{
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.header__mail{
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.header__button{
+  font-family: 'Ubuntu';
+  width: 205.9px;
+  height: 57px;
+  background-color: #FF0000;
+  color: #ffffff;
+  border-radius: 10px;
+  border: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+
+.header__telephone{
+  display: flex;
+  flex-direction: column;
+}
+
+.header-telephone__time{
+  font-size: 11px;
+}
+
+.header-telephone__number{
+
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.header__bottom{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 33px;
+  text-transform: uppercase;
+  font-family: 'Ubuntu';
+  font-size: 14px;
+}
+
+.header__bottom a{
+  text-decoration: none;
+  font-weight: bolder;
+  color: #001B5B;
+  transition: .6s;
+}
+
+.bottom__link:hover{
+  color: #19191B;
+  border-top: 2px solid #001B5B;
+  transition: .6s;
+}
+
+.header__popup{
+  top: 0;
+  position: absolute;
+  font-family: 'Ubuntu';
+  font-size: 14px;
+  color: #012283;
+  text-align: center;
+  border-bottom: 2px solid #001B5B;
+  transition: .6s;
+  width: 100%;
+  display: none;
+  padding-top: 10px;
+  font-weight: bolder;
+}
+
+
+.header__popup li{
+  padding: 5px;
+}
+
+.bottom__link{
+  border-top: 2px solid white;
+  padding-top: 5px;
+  position: relative;
+  width: 12.5%;
+  text-align: center;
+}
+
+.bottom__link:hover .header__popup{
+  display: block;
+}
+
+.header__popup:hover {
+  display: block;
+}
+
+.__closed .header__bottom{
+  animation: 0.6s ease-in 0.1s 1 normal forwards running close;
+}
+
+@keyframes close {
+  from{
+    opacity: 1;
+    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0);
+  } to{
+    opacity: 0;
+        box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 1);
+      }
+}
